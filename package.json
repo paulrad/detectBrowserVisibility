@@ -1,0 +1,22 @@
+{
+  "name": "detectBrowserVisibility",
+  "version": "0.0.1",
+  "description": "detect browser visibility states changes",
+  "main": "detectBrowserVisibility.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:paulrad/detectBrowserVisibility.git"
+  },
+  "keywords": [
+    "pagevisibility"
+  ],
+  "author": "Paul Rad <paul@paulrad.com> (http://paulrad.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/paulrad/detectBrowserVisibility/issues"
+  },
+  "homepage": "https://github.com/paulrad/detectBrowserVisibility"
+}

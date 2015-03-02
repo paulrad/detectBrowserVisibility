@@ -1,0 +1,49 @@
+<!doctype>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>detectBrowserVisibility: detect current document visibility | PaulRad</title>
+  <script src="../detectBrowserVisibility.js"></script>
+</head>
+<body>
+  <h1>detectBrowserVisibility()</h1>
+  <div class="demo">
+    <p>
+      Un petit exemple nous permettant de logguer les évènements de changement d'onglet.<br>
+      <em>Essayez de changer d'onglet, puis de revenir pour voir la démonstration</em>
+    </p>
+    <style type="text/css">
+    #demo-1 li { font-weight: 300; color: #666 }
+    #demo-1 li:first-child { color: red; font-weight: 500; }
+    </style>
+    <ul id="demo-1" style="overflow-y: auto; max-height: 200px; background: #fff;">
+      <li>L'onglet est actif !</li>
+    </ul>
+  </div>
+
+  <script>
+    var $ = function(id) {
+      var Element = document.getElementById(id);
+      Element.prepend = function(text) {
+        Element.innerHTML = text + '' + Element.innerHTML;
+        return Element;
+      };
+      return Element;
+    }
+    var Demo = $('demo-1');
+
+
+    var disabledAt = null;
+
+    detectBrowserVisibility().
+      onActive(function() {
+        Demo.prepend("<li>Onglet de nouveau actif, l'onglet est resté inactif durant " + 
+          ~~(+new Date/1000 - disabledAt) + " seconde(s)</li>");
+      }).
+      onDisabled(function() {
+        disabledAt = +new Date/1000;
+      });
+  </script>
+
+</body>
+</html>

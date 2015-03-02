@@ -1,0 +1,14 @@
+{
+  "name": "detectBrowserVisibility.js",
+  "version": "0.0.1",
+  "homepage": "http://paulrad.com",
+  "authors": [
+    "Paul Rad <paul@paulrad.com>"
+  ],
+  "description": "detect browser visibility states",
+  "main": "detectBrowserVisibility.js",
+  "keywords": [
+    "pagevisbility"
+  ],
+  "license": "MIT"
+}
